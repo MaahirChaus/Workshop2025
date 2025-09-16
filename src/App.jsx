@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <Router>
-      <div className="conatainer-fluid">
+      <div className="container-fluid ">
         <div className="row mb-1">
           <div className="col-12">
             <Header1 />
@@ -30,14 +30,16 @@ function App() {
             path="/"
             element={
               <>
-                <div className="row ">
+                <div className="row mb-2">
                   <div className="col-12">
                     <Slider />
                   </div>
+                  </div>
 
                   <div className="container-flex">
-                    <div className="row ">
-                      <div className="col-3 ">
+                    <div className="row m-2">
+                      
+                      <div className="col-sm-6 col-md-4 col-lg-3">
                         <ProTest
                           imgSrc={"images/lc_kit.jpg"}
                           textHead={"Offroading Lights"}
@@ -47,9 +49,9 @@ function App() {
                         />
                       </div>
 
-                      <div className="col-3">
+                      <div className="col-sm-6 col-md-4 col-lg-3">
                         <ProTest
-                          imgSrc={"images/downladdera.jpg"}
+                          imgSrc={"images/downladdera1.jpg"}
                           textHead={"External stairs"}
                           text={
                             "Some quick example text to build on the card title and make up the bulk of the card’s content."
@@ -57,9 +59,9 @@ function App() {
                         />
                       </div>
 
-                      <div className="col-3">
+                      <div className="col-sm-6 col-md-4 col-lg-3">
                         <ProTest
-                          imgSrc={"images/lc_tyres.jpg"}
+                          imgSrc={"images/Land-Cruiser-250-Black-RS-1.jpg"}
                           textHead={"Stylish Alloys"}
                           text={
                             "Some quick example text to build on the card title and make up the bulk of the card’s content."
@@ -67,7 +69,7 @@ function App() {
                         />
                       </div>
 
-                      <div className="col-3">
+                      <div className="col-sm-6 col-md-4 col-lg-3">
                         <ProTest
                           imgSrc={"images/Lexus-LC-interior-09.jpg"}
                           textHead={"Premium Interio"}
@@ -78,7 +80,6 @@ function App() {
                       </div>
                     </div>
                   </div>
-                </div>
               </>
             }
           ></Route>
