@@ -8,10 +8,15 @@ import Product from './content/Product'
 import ProTest from './content/ProTest'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Head from './content/Head'
-import About from './pages/About'
+/*import About from './pages/About'
 import Contact from './pages/Contact'
-import Ser from './pages/Ser'
+import Ser from './pages/Ser'*/
 import Error from './pages/Error'
+import { lazy, Suspense } from 'react';
+
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Ser = lazy(() => import('./pages/Ser'));
 
 
 function App() {
@@ -20,6 +25,7 @@ function App() {
     <>
     
     <Router>
+       <Suspense fallback={<div>Loading...Plz wait</div>}>
       <div className="container-fluid ">
         <div className="row mb-1">
           <div className="col-12">
@@ -130,6 +136,7 @@ function App() {
           </div>
         </div>
       </div>
+      </Suspense>
       </Router>
     </>
   );
