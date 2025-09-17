@@ -11,12 +11,14 @@ import Head from './content/Head'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Ser from './pages/Ser'
+import Error from './pages/Error'
 
 
 function App() {
 
   return (
     <>
+    
     <Router>
       <div className="container-fluid ">
         <div className="row mb-1">
@@ -24,6 +26,7 @@ function App() {
             <Header1 />
           </div>
         </div>
+        
 
         <Routes>
           <Route
@@ -37,7 +40,7 @@ function App() {
                   </div>
 
                   <div className="container-flex">
-                    <div className="row m-2">
+                    <div className="row m-2 ">
                       
                       <div className="col-sm-6 col-md-4 col-lg-3">
                         <ProTest
@@ -107,6 +110,15 @@ function App() {
             element={
               <>
               <Ser />
+              </>
+            }
+          ></Route>
+
+          <Route
+            path="*"
+            element={
+              <>
+              <Error />
               </>
             }
           ></Route>
