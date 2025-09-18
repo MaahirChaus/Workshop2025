@@ -7,9 +7,9 @@ import Footer from './content/Footer'
 import Product from './content/Product'
 import ProTest from './content/ProTest'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-/*import About from './pages/About'
+import About from './pages/About'
 import Contact from './pages/Contact'
-import Ser from './pages/Ser'*/
+import Ser from './pages/Ser'
 import Error from './pages/Error'
 import { lazy, Suspense } from 'react';
 import Register from './pages/Register'
