@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Header1 from './content/Header1'
 import Slider from './content/Slider'
-import Footer from './content/footer'
+import Footer from './content/Footer'
 import Product from './content/Product'
 import ProTest from './content/ProTest'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
