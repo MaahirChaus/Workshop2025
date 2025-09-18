@@ -31,8 +31,11 @@ function Register() {
     if (!forms.mob.trim()){
       newErrors.mob = "Mobile no. is required";
     }
-    if (!forms.mess.trim()){
-      newErrors.mess = "Specify your problem";
+    if (!forms.pass.trim()){
+      newErrors.pass = "Password is required";
+    }
+    if (!forms.confpass.trim()){
+      newErrors.confpass = "Password is required";
     }
     return newErrors;
   }
@@ -49,7 +52,7 @@ function Register() {
   }
 
   const handleClear = ()=>{
-    setforms ({name:"",email:"",mob:"",mess:""});
+    setforms ({name:"",email:"",mob:"",pass:"",confpass:""});
     setErrors({});
   }
 
@@ -131,10 +134,10 @@ function Register() {
                     name="pass"
                     placeholder="Enter your password here "
                     autoComplete="off"
-                    value={forms.mess}
+                    value={forms.pass}
                     onChange={handleChange}
                   />
-                  {errors.mess && (
+                  {errors.pass && (
                     <div className="invalid-feedback">{errors.pass}</div>
                   )}
                 </div>
@@ -152,7 +155,7 @@ function Register() {
                     value={forms.confpass}
                     onChange={handleChange}
                   />
-                  {errors.mess && (
+                  {errors.confpass && (
                     <div className="invalid-feedback">{errors.confpass}</div>
                   )}
                 </div>

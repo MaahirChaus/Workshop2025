@@ -2,13 +2,9 @@ import React, { useState } from 'react'
 
 function Login() {
   const [forms, setforms] = useState({
-      name: "",
       email:"",
-      mob:"",
-      mess:"",
       pass:"",
-      confpass:"",
-    })
+      })
 
     
   
@@ -25,23 +21,11 @@ function Login() {
   
     const validate = ()=>{
       let newErrors = {};
-      if (!forms.name){
-        newErrors.name = "Name is required";
-      }
       if (!forms.email){
         newErrors.email = "Email is required";
       }
-      if (!forms.mob){
-        newErrors.mob = "Mobile no. is required";
-      }
-      if (!forms.mess){
-        newErrors.mess = "Specify your problem";
-      }
       if (!forms.pass){
-        newErrors.mess = "Password is required";
-      }
-      if (!forms.confpass){
-        newErrors.mess = "Confirm your password";
+        newErrors.pass = "Password is required";
       }
       return newErrors;
     }
@@ -58,7 +42,7 @@ function Login() {
     }
   
     const handleClear = ()=>{
-      setforms ({name:"",email:"",mob:"",mess:"",pass:"",confpass:""});
+      setforms ({email:"",pass:""});
       setErrors({});
     }
   
@@ -105,10 +89,10 @@ function Login() {
                     name="pass"
                     placeholder="Enter your password here "
                     autoComplete="off"
-                    value={forms.mess}
+                    value={forms.pass}
                     onChange={handleChange}
                   />
-                  {errors.mess && (
+                  {errors.pass && (
                     <div className="invalid-feedback">{errors.pass}</div>
                   )}
                 </div>
