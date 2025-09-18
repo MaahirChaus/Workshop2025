@@ -47,10 +47,10 @@ function Header1() {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              <button onClick={() => navigate('/Register')} className="btn btn-outline-primary me-2" type="submit">
+              <button onClick={() => navigate('/Register')} className="btn btn-outline-primary me-2" type="button">
                 Register
               </button>
-              <button onClick={() => navigate('/Login')} className="btn btn-outline-success me-2" type="submit">
+              <button onClick={() => navigate('/Login')} className="btn btn-outline-success me-2" type="button">
                 Login
               </button>
             </form>
