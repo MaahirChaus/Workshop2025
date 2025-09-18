@@ -6,13 +6,13 @@ function Slider() {
       <div id="carouselExample" className="carousel slide">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="images/l1.jpeg" className="d-block w-100" alt="..." />
+            <img src="images/l3.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
             <img src="images/lc2.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="images/l3.jpg" className="d-block w-100" alt="..." />
+            <img src="images/l111.jpg" className="d-block w-100" alt="..." />
           </div>
         </div>
         <button

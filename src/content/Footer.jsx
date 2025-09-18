@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Footer() {
+
+const [dateTime , setDateTime] = useState(new Date());
+
+useEffect (()=>{
+  const timer = setInterval(()=> setDateTime(new Date()),1000);
+  return ()=> clearInterval(timer);
+},[]);
+
   return (
     <div>
           <footer
@@ -11,112 +19,67 @@ function Footer() {
               <section className>
                 <div className="row">
                   <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">FOOTER CONTENT</h5>
+                    <h5 className="text-uppercase">About Land Cruiser</h5>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestiae modi cum ipsam ad, illo possimus laborum ut
-                      reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur
-                      eaque? Reiciendis assumenda iusto sapiente inventore
-                      animi?
+The Land Cruiser is Toyota’s legendary SUV, known for its unmatched durability, off-road capability, and luxury. Built to conquer any terrain, it’s the ultimate adventure vehicle.
                     </p>
                   </div>
                   <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">Links</h5>
+                    <h5 className="text-uppercase">Quick Links</h5>
                     <ul className="list-unstyled mb-0">
                       <li>
                         <a href="#!" className="text-white">
-                          Link 1
+                          Home
                         </a>
                       </li>
                       <li>
                         <a href="#!" className="text-white">
-                          Link 2
+                          About
                         </a>
                       </li>
                       <li>
                         <a href="#!" className="text-white">
-                          Link 3
+                          Features
                         </a>
                       </li>
                       <li>
                         <a href="#!" className="text-white">
-                          Link 4
+                          Contact Us
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">Links</h5>
+                    <h5 className="text-uppercase">Customer Support</h5>
                     <ul className="list-unstyled mb-0">
                       <li>
                         <a href="#!" className="text-white">
-                          Link 1
+                          FAQs
                         </a>
                       </li>
                       <li>
                         <a href="#!" className="text-white">
-                          Link 2
+                          Warranty & Maintenance
                         </a>
                       </li>
                       <li>
                         <a href="#!" className="text-white">
-                          Link 3
+                          Roadside Assistance
                         </a>
                       </li>
                       <li>
                         <a href="#!" className="text-white">
-                          Link 4
+                          Financing Options
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">Links</h5>
+                    <h5 className="text-uppercase">Time and Date</h5>
                     <ul className="list-unstyled mb-0">
                       <li>
-                        <a href="#!" className="text-white">
-                          Link 1
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 2
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 3
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 4
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">Links</h5>
-                    <ul className="list-unstyled mb-0">
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 1
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 2
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 3
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="text-white">
-                          Link 4
-                        </a>
+                        <p>📅 {dateTime.toLocaleDateString()} <br />⏰{" "}
+                {dateTime.toLocaleTimeString()}</p>
                       </li>
                     </ul>
                   </div>
@@ -145,35 +108,21 @@ function Footer() {
                 </a>
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
-                  role="button"
-                >
-                  <i className="fab fa-twitter" />
-                </a>
-                <a
-                  className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
-                  role="button"
-                >
-                  <i className="fab fa-google" />
-                </a>
-                <a
-                  className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href="https://www.instagram.com"
                   role="button"
                 >
                   <i className="fab fa-instagram" />
                 </a>
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href="www.linkedin.com/in/maahir-chaus-4b0623322"
                   role="button"
                 >
                   <i className="fab fa-linkedin-in" />
                 </a>
                 <a
                   className="btn btn-outline-light btn-floating m-1"
-                  href="#!"
+                  href=""
                   role="button"
                 >
                   <i className="fab fa-github" />

@@ -33,8 +33,6 @@ function About() {
             <p>The core values behind the Toyota Land Cruiser<br />
 Durability<br />Reliability<br />Off-Road Capability<br />Simplicity & Functionality<br />Longevity</p>
           </div>
-
-
         </div>
       </div>
     </div>

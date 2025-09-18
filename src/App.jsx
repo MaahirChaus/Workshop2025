@@ -7,7 +7,6 @@ import Footer from './content/footer'
 import Product from './content/Product'
 import ProTest from './content/ProTest'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Head from './content/Head'
 /*import About from './pages/About'
 import Contact from './pages/Contact'
 import Ser from './pages/Ser'*/
