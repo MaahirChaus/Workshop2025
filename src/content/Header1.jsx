@@ -1,8 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 function Header1() {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,7 +37,7 @@ function Header1() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link disable" aria-current="page" to='/services'>
-                  Services
+                  Features
                 </Link>
               </li>
               <li className="nav-item">
@@ -44,10 +47,10 @@ function Header1() {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              <button className="btn btn-outline-primary me-2" type="submit">
+              <button onClick={() => navigate('/Register')} className="btn btn-outline-primary me-2" type="submit">
                 Register
               </button>
-              <button className="btn btn-outline-success me-2" type="submit">
+              <button onClick={() => navigate('/Login')} className="btn btn-outline-success me-2" type="submit">
                 Login
               </button>
             </form>

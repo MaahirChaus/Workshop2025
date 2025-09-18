@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
@@ -28,24 +29,24 @@ The Land Cruiser is Toyota’s legendary SUV, known for its unmatched durability
                     <h5 className="text-uppercase">Quick Links</h5>
                     <ul className="list-unstyled mb-0">
                       <li>
-                        <a href="#!" className="text-white">
+                        <Link to="/" className="text-white">
                           Home
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#!" className="text-white">
+                        <Link to="/about" className="text-white">
                           About
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#!" className="text-white">
+                        <Link to="/services" className="text-white">
                           Features
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#!" className="text-white">
+                        <Link to="/contact" className="text-white">
                           Contact Us
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -91,6 +92,7 @@ The Land Cruiser is Toyota’s legendary SUV, known for its unmatched durability
                   <span className="me-3">Register for free</span>
                   <button
                     type="button"
+                    onClick={() => navigate('/Register')}
                     className="btn btn-outline-light btn-rounded"
                   >
                     Sign up!

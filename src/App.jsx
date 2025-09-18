@@ -12,6 +12,8 @@ import Contact from './pages/Contact'
 import Ser from './pages/Ser'*/
 import Error from './pages/Error'
 import { lazy, Suspense } from 'react';
+import Register from './pages/Register'
+import Login from './pages/Login'
 
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -115,6 +117,24 @@ function App() {
             element={
               <>
               <Ser />
+              </>
+            }
+          ></Route>
+
+          <Route
+            path="/Register"
+            element={
+              <>
+              <Register />
+              </>
+            }
+          ></Route>
+
+          <Route
+            path="/Login"
+            element={
+              <>
+              <Login />
               </>
             }
           ></Route>

@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom';
 function Error() {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate('/');
-  };
+//const handleClick = () => {
+ //   navigate('/');
+  //};
+
   return (
     <div>
       <div className="error">
@@ -24,7 +25,7 @@ function Error() {
           <div className='row '>
             <div className="col text-center mb-4">  
           <button 
-          onClick={handleClick}
+          onClick={() => navigate('/')}
           type="button" 
           class="btn btn-outline-danger mt-3">
           Back to home
